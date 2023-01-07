@@ -1,0 +1,11 @@
+<button onclick="start()">Start</button>
+<div id="foo"></div>
+<script type="text/javascript">
+    function start() {
+        var eventSource = new EventSource("TestServlet");
+        eventSource.onmessage = function(event) {
+            console.log("data: "+event.data)
+            document.getElementById('foo').innerHTML = event.data;
+        };
+    }
+</script>

@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>HTML5 slider</title>
+<h1>Slider Bar</h1>
+</head>
+<body>
+
+	<input type="range" name="rangeInput" min="0" max="100"
+		onchange="updateTextInput(this.value);">
+	<span id="textInput">0</span>
+	<script type="text/javascript">
+		function updateTextInput(val) {
+			document.getElementById('textInput').innerHTML = val;
+		}
+	</script>
+</body>
+</html>
